@@ -1,5 +1,5 @@
 
-updated_workflow = '''name: Build Flutter APK
+name: Build Flutter APK
 
 on:
   workflow_dispatch:
@@ -307,13 +307,4 @@ jobs:
           name: flutter-${{ github.event.inputs.build_type }}-${{ github.event.inputs.tag }}
           path: ${{ env.PROJECT_DIR }}/${{ env.APK_PATH }}
           retention-days: 1
-          if-no-files-found: error
-'''
-
-# Save to file
-with open('/mnt/agents/output/build.yml', 'w') as f:
-    f.write(updated_workflow)
-
-print("✅ Workflow updated successfully!")
-print(f"File saved to: /mnt/agents/output/build.yml")
-print(f"Total lines: {len(updated_workflow.splitlines())}")
+          if-no-files-found: eror
