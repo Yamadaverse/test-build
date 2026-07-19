@@ -307,4 +307,4 @@ jobs:
           name: flutter-${{ github.event.inputs.build_type }}-${{ github.event.inputs.tag }}
           path: ${{ env.PROJECT_DIR }}/${{ env.APK_PATH }}
           retention-days: 1
-          if-no-files-found: eror
+          if-no-files-found: error
